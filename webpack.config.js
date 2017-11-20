@@ -40,7 +40,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin()],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
