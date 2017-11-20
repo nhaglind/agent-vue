@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   name: 'app',
   data () {
@@ -22,20 +20,12 @@ export default {
   },
   methods: {
     displayUA: function() {
-      var self = this;
-      axios.get('http://httpbin.org/user-agent')
-      .then(response => {
-        self.userAgent = response.data['user-agent'];
-      })
-      .catch(error => {
-        console.log(error);
-      })
+      this.userAgent = navigator.userAgent
     },
     browserType: function() {
-      var self = this;
-      if ('Mozillasdsada'.includes("Mozilla")) {
+      if (this.userAgent.includes("Mozilla")) {
         console.log('Mozilla!');
-        self.browser = 'https://www.underconsideration.com/brandnew/archives/firefox_2017_logo.jpg';
+        this.browser = 'https://www.underconsideration.com/brandnew/archives/firefox_2017_logo.jpg';
       }
     }
   }
