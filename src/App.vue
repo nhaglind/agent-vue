@@ -1,6 +1,8 @@
 <template>
   <div id="app">
+    
     <p>{{userAgent}}</p>
+    
     <img v-bind:src="browser"><img>
     <img v-bind:src="device"></img>
   </div>
@@ -25,13 +27,18 @@ export default {
       this.userAgent = navigator.userAgent
     },
     browserType: function() {
-      if (this.userAgent.includes("Mozilla")) {
-        console.log('Mozilla!');
+      let responseUA = this.userAgent = navigator.userAgent;
+      if (responseUA.includes("Mozilla")) {
+        console.log('Mozilla');
         this.browser = 'https://www.underconsideration.com/brandnew/archives/firefox_2017_logo.jpg';
       }
-      if (this.userAgent.includes("Mac")) {
-        console.log('Mac!');
+      if (responseUA.includes("Mac")) {
+        console.log('Mac');
         this.device = 'https://www.logodesignlove.com/images/classic/apple-logo-rob-janoff-01.jpg';
+      }
+      if (responseUA.includes("Edge")) {
+        console.log('Edge');
+        this.device = 'https://png.icons8.com/microsoft-edge/color/1600';
       }
     }
   }
