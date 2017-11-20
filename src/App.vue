@@ -2,6 +2,7 @@
   <div id="app">
     <p>{{userAgent}}</p>
     <img v-bind:src="browser"><img>
+    <img v-bind:src="device"></img>
   </div>
 </template>
 
@@ -11,7 +12,8 @@ export default {
   data () {
     return {
       userAgent: '',
-      browser: ''
+      browser: '',
+      device: ''
     }
   },
   created: function () {
@@ -26,6 +28,10 @@ export default {
       if (this.userAgent.includes("Mozilla")) {
         console.log('Mozilla!');
         this.browser = 'https://www.underconsideration.com/brandnew/archives/firefox_2017_logo.jpg';
+      }
+      if (this.userAgent.includes("Mac")) {
+        console.log('Mac!');
+        this.device = 'https://www.logodesignlove.com/images/classic/apple-logo-rob-janoff-01.jpg';
       }
     }
   }
