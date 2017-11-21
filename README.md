@@ -1,6 +1,6 @@
 # agent-vue
 
-> Teeny tiny application to display user agent. Honestly, you can just run `navigator.userAgent` in console and you'll get the same result. I'm just adding pictures based on the response, but apparently this is a bit more complex than pulling that data. Read here https://github.com/WhichBrowser/Parser-JavaScript why sniffing isn't such a great idea.
+> Teeny tiny application to display user agent. Honestly, you can just run `navigator.userAgent` in console and you'll get the same result. I'm just adding pictures based on the response, but apparently this is a bit more complex than pulling simply parsing the text from UA. Read here https://github.com/WhichBrowser/Parser-JavaScript why sniffing isn't such a great idea.
 
 View the demo hosted on Netlify over at https://stoic-austin-802b6e.netlify.com/
 

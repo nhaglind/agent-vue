@@ -13,7 +13,8 @@ export default {
   data () {
     return {
       userAgent: '',
-      images: ''
+      images: '',
+      imageSource: require(['./assets/images/chrome_logo.png', './assets/images/firefox_logo.png', './assets/images/apple_logo.png', './assets/images/edge_logo.png'])
     }
   },
   created: function () {
@@ -30,16 +31,16 @@ export default {
       this.images = images;
 
       if (responseUA.includes("Chrome")) {
-        images.push('https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/20170911_Google_Chrome_logo_vector_download.png');
+        images.push('./src/assets/images/chrome_logo.png');
       }
       if (responseUA.includes("Firefox")) {
-        images.push('https://www.underconsideration.com/brandnew/archives/firefox_2017_logo.jpg');
+        images.push('./src/assets/images/firefox_logo.png');
       }
       if (responseUA.includes("Mac")) {
-        images.push('https://www.logodesignlove.com/images/classic/apple-logo-rob-janoff-01.jpg');
+        images.push('./src/assets/images/apple_logo.png');
       }
       if (responseUA.includes("Edge")) {
-        images.push('https://png.icons8.com/microsoft-edge/color/1600');
+        images.push('./src/assets/images/edge_logo.png');
       }
     }
   }
